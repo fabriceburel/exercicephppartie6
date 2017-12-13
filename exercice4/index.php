@@ -5,17 +5,14 @@
     <title>exercice4</title>
   </head>
   <body>
+    <p> Dans l'URL saisir les paramètre ainsi http://exercicephp6-4/?<strong>langage</strong>=PHP&<strong>serveur</strong>=LAMP</p>
     <?php
-    compareNumber(60,60);
-    function compareNumber($number1,$number2){
-      if($number1 > $number2){
-        echo 'Le premier nombre est plus grand';
-      }elseif ($number1 < $number2) {
-        echo 'Le premier nombre est plus petit';
-      }else{
-        echo 'Les deux nombres sont identiques';
-      }
+    if(isset($_GET['langage']) && isset($_GET['serveur'])){
+        echo '<p>langage : ' . $_GET['langage'] . 'et le serveur est : ' . $_GET['serveur'] . '</p>';
+    }else{
+      echo '<p>saisir les paramètre php et serveur</p>';
     }
+
     ?>
   </body>
 </html>
